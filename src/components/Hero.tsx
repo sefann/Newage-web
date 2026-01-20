@@ -1,0 +1,94 @@
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+import { NavLink } from "react-router-dom";
+
+const Hero = () => {
+  return (
+    <section className="relative overflow-hidden bg-primary text-white">
+      <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(0,47,109,0.95),rgba(0,47,109,0.8))]" />
+      <div className="absolute inset-0 opacity-20">
+        <img
+          src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1600&q=80"
+          alt="Corporate team collaboration"
+          className="h-full w-full object-cover"
+          loading="lazy"
+        />
+      </div>
+      <div className="relative mx-auto flex w-full max-w-6xl flex-col gap-8 px-4 py-24 lg:flex-row lg:items-center lg:gap-16 lg:px-6 lg:py-32">
+        <div className="max-w-xl">
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-sm font-semibold uppercase tracking-[0.2em] text-accent"
+          >
+            Future-ready corporate partner
+          </motion.p>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="mt-4 text-4xl font-semibold leading-tight text-white md:text-5xl"
+          >
+            Building trusted business outcomes for forward-thinking enterprises.
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mt-5 text-lg text-white/80"
+          >
+            Newage Group delivers strategy, operations, and innovation services
+            that help organizations scale efficiently and sustainably.
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="mt-8 flex flex-wrap gap-4"
+          >
+            <NavLink
+              to="/contact"
+              className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-primary transition hover:brightness-105"
+            >
+              Start a conversation
+              <ArrowRight size={16} />
+            </NavLink>
+            <NavLink
+              to="/services"
+              className="inline-flex items-center gap-2 rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+            >
+              Explore services
+            </NavLink>
+          </motion.div>
+        </div>
+        <motion.div
+          initial={{ opacity: 0, x: 30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="rounded-2xl border border-white/20 bg-white/10 p-6 backdrop-blur"
+        >
+          <h3 className="text-lg font-semibold text-white">
+            Enterprise impact highlights
+          </h3>
+          <ul className="mt-4 space-y-4 text-sm text-white/80">
+            <li className="flex items-start gap-3">
+              <span className="mt-1 h-2 w-2 rounded-full bg-accent" />
+              120+ corporate engagements across Africa and Europe.
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="mt-1 h-2 w-2 rounded-full bg-accent" />
+              24/7 strategic advisory and operational oversight.
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="mt-1 h-2 w-2 rounded-full bg-accent" />
+              Proven frameworks aligned with global compliance standards.
+            </li>
+          </ul>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;

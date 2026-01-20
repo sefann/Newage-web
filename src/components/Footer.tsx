@@ -26,6 +26,9 @@ const Footer = () => {
             <NavLink to="/gallery" className="text-white/70 hover:text-white">
               Gallery
             </NavLink>
+            <NavLink to="/careers" className="text-white/70 hover:text-white">
+              Careers
+            </NavLink>
             <NavLink to="/contact" className="text-white/70 hover:text-white">
               Contact
             </NavLink>

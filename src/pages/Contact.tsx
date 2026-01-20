@@ -4,6 +4,57 @@ import PageHeader from "../components/PageHeader";
 
 const FORM_ENDPOINT = "https://formspree.io/f/yourFormId";
 
+const branches = [
+  {
+    name: "Magboro Head Office",
+    location: "Magboro, Ogun State",
+    image:
+      "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    name: "Ikeja Service Point",
+    location: "Ikeja, Lagos State",
+    image:
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    name: "Lekki Service Point",
+    location: "Lekki, Lagos State",
+    image:
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    name: "Ajah Service Point",
+    location: "Ajah, Lagos State",
+    image:
+      "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    name: "Victoria Island Outlet",
+    location: "Victoria Island, Lagos State",
+    image:
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    name: "Abeokuta Branch",
+    location: "Abeokuta, Ogun State",
+    image:
+      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    name: "Sagamu Branch",
+    location: "Sagamu, Ogun State",
+    image:
+      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    name: "Ijebu Ode Branch",
+    location: "Ijebu Ode, Ogun State",
+    image:
+      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=800&q=80",
+  },
+];
+
 const Contact = () => {
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
@@ -160,6 +211,54 @@ const Contact = () => {
                 Saturday: 10:00 AM - 2:00 PM
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-slate-50">
+        <div
+          className="mx-auto w-full max-w-6xl px-4 py-16 lg:px-6"
+          data-aos="fade-up"
+        >
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">
+                Branches
+              </p>
+              <h2 className="mt-4 text-3xl font-semibold text-slate-900">
+                Our branch locations across Lagos and Ogun.
+              </h2>
+              <p className="mt-3 max-w-2xl text-base text-slate-600">
+                Explore our service points and outlets serving clients across
+                the region.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {branches.map((branch) => (
+              <div
+                key={branch.name}
+                className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
+              >
+                <div className="h-24 w-full overflow-hidden">
+                  <img
+                    src={branch.image}
+                    alt={branch.name}
+                    className="h-full w-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="text-sm font-semibold text-slate-900">
+                    {branch.name}
+                  </h3>
+                  <p className="mt-1 text-xs text-slate-500">
+                    {branch.location}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

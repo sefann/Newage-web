@@ -1,7 +1,45 @@
 import { NavLink } from "react-router-dom";
-import { Fish, Fuel, Truck } from "lucide-react";
+import { Fish, Fuel, Globe2, Leaf, Truck } from "lucide-react";
 import Hero from "../components/Hero";
 import ServiceCard from "../components/ServiceCard";
+
+const serviceHighlights = [
+  {
+    title: "Energy",
+    description:
+      "Quality petroleum products and services with a growing focus on cleaner LPG solutions.",
+    icon: <Fuel />,
+    href: "/services#energy",
+  },
+  {
+    title: "Foods",
+    description:
+      "Importation, distribution, and sales of frozen foods backed by ethical sourcing.",
+    icon: <Fish />,
+    href: "/services#foods",
+  },
+  {
+    title: "Transport",
+    description:
+      "Bespoke haulage, logistics, and warehousing support for internal and external clients.",
+    icon: <Truck />,
+    href: "/services#transport",
+  },
+  {
+    title: "Agriculture",
+    description:
+      "Commercial farming across fish, poultry, cattle, and cash crops with international production standards.",
+    icon: <Leaf />,
+    href: "/services#agriculture",
+  },
+  {
+    title: "Exports",
+    description:
+      "International trading of agricultural produce and commodities across global markets.",
+    icon: <Globe2 />,
+    href: "/services#exports",
+  },
+];
 
 const Home = () => {
   return (
@@ -82,21 +120,41 @@ const Home = () => {
             </NavLink>
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
-            <ServiceCard
-              title="Energy"
-              description="Quality petroleum products and services with a growing focus on cleaner LPG solutions."
-              icon={<Fuel />}
-            />
-            <ServiceCard
-              title="Foods"
-              description="Importation, distribution, and sales of frozen foods with ethical sourcing and cold-chain reliability."
-              icon={<Fish />}
-            />
-            <ServiceCard
-              title="Transport"
-              description="Bespoke haulage, logistics, and warehousing support for internal and external clients."
-              icon={<Truck />}
-            />
+            {serviceHighlights.map((service) => (
+              <ServiceCard
+                key={service.title}
+                title={service.title}
+                description={service.description}
+                icon={service.icon}
+                actionLabel="Read more"
+                actionHref={service.href}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white">
+        <div
+          className="mx-auto w-full max-w-6xl px-4 py-16 lg:px-6"
+          data-aos="fade-up"
+        >
+          <div className="flex flex-col gap-8 rounded-3xl border border-slate-200 bg-white p-8 shadow-sm lg:flex-row lg:items-center lg:justify-between lg:p-12">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+                New Age Group
+              </p>
+              <h2 className="mt-4 text-3xl font-semibold text-slate-900 md:text-4xl">
+                Want to learn more about us?
+              </h2>
+            </div>
+            <a
+              href="/company-profile.pdf"
+              className="inline-flex items-center justify-center rounded-xl bg-primary px-8 py-4 text-sm font-semibold text-white shadow-lg shadow-primary/20 transition hover:bg-primary/90"
+              download
+            >
+              Download our company profile
+            </a>
           </div>
         </div>
       </section>

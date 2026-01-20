@@ -68,34 +68,16 @@ const Home = () => {
               </p>
             </div>
             <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
-              <div className="grid gap-6 sm:grid-cols-2">
-                <div>
-                  <p className="text-2xl font-semibold text-primary">2009</p>
-                  <p className="mt-2 text-sm text-slate-600">
-                    Incorporated in Lagos, Nigeria
-                  </p>
-                </div>
-                <div>
-                  <p className="text-2xl font-semibold text-primary">2013</p>
-                  <p className="mt-2 text-sm text-slate-600">
-                    Operations officially commenced
-                  </p>
-                </div>
-                <div>
-                  <p className="text-2xl font-semibold text-primary">5</p>
-                  <p className="mt-2 text-sm text-slate-600">
-                    Core business arms
-                  </p>
-                </div>
-                <div>
-                  <p className="text-2xl font-semibold text-primary">
-                    Nationwide
-                  </p>
-                  <p className="mt-2 text-sm text-slate-600">
-                    Strategic outlets and offices
-                  </p>
-                </div>
-              </div>
+              <h3 className="text-xl font-semibold text-slate-900">
+                Why organizations choose us
+              </h3>
+              <ul className="mt-4 space-y-3 text-sm text-slate-600">
+                <li>
+                  Consistent quality standards across every business arm.
+                </li>
+                <li>Strategic outlets and logistics built close to markets.</li>
+                <li>People-first partnerships with a focus on reliability.</li>
+              </ul>
             </div>
           </div>
         </div>

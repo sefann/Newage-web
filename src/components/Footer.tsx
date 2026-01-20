@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Linkedin, Mail, MapPin, Phone, Twitter } from "lucide-react";
 import { NavLink } from "react-router-dom";
 
 const Footer = () => {
@@ -51,6 +51,46 @@ const Footer = () => {
               <Mail size={16} className="text-accent" />
               info@newagegroupng.com
             </p>
+          </div>
+          <div className="mt-6">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/60">
+              Social
+            </p>
+            <div className="mt-3 flex items-center gap-4 text-white/70">
+              <a
+                href="https://www.linkedin.com"
+                className="transition hover:text-white"
+                aria-label="LinkedIn"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Linkedin size={18} />
+              </a>
+              <a
+                href="https://x.com/Newagegroup_ng"
+                className="transition hover:text-white"
+                aria-label="X (formerly Twitter)"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Twitter size={18} />
+              </a>
+              <a
+                href="https://instagram.com/Newagegroup_ng"
+                className="transition hover:text-white"
+                aria-label="Instagram"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  className="h-[18px] w-[18px] fill-current"
+                >
+                  <path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm10 2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm-5 3.5A4.5 4.5 0 1 1 7.5 13 4.5 4.5 0 0 1 12 8.5zm0 2A2.5 2.5 0 1 0 14.5 13 2.5 2.5 0 0 0 12 10.5zm5-4.1a1.1 1.1 0 1 1-1.1 1.1A1.1 1.1 0 0 1 17 6.4z" />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
       </div>

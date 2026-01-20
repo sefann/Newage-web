@@ -1,32 +1,19 @@
 type PageHeaderProps = {
   title: string;
   subtitle: string;
-  align?: "left" | "center";
 };
 
-const PageHeader = ({ title, subtitle, align = "left" }: PageHeaderProps) => {
-  const isCentered = align === "center";
+const PageHeader = ({ title, subtitle }: PageHeaderProps) => {
   return (
     <section className="bg-slate-50">
-      <div className="mx-auto w-full max-w-6xl px-4 py-16 lg:px-6">
-        <p
-          className={`text-sm font-semibold uppercase tracking-[0.2em] text-accent ${
-            isCentered ? "text-center" : ""
-          }`}
-        >
-          New Age Group
-        </p>
+      <div className="mx-auto w-full max-w-6xl px-4 py-20 lg:px-6 lg:py-28">
         <h1
-          className={`mt-4 text-3xl font-semibold text-slate-900 md:text-4xl ${
-            isCentered ? "text-center text-4xl md:text-5xl" : ""
-          }`}
+          className="text-center text-4xl font-extrabold text-slate-900 md:text-5xl"
         >
           {title}
         </h1>
         <p
-          className={`mt-4 max-w-2xl text-base text-slate-600 ${
-            isCentered ? "mx-auto text-center text-lg" : ""
-          }`}
+          className="mx-auto mt-5 max-w-3xl text-center text-lg font-medium text-slate-600"
         >
           {subtitle}
         </p>

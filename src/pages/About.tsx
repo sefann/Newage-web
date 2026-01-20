@@ -1,4 +1,4 @@
-import { Mail } from "lucide-react";
+import { Mail, Play } from "lucide-react";
 import PageHeader from "../components/PageHeader";
 
 const About = () => {
@@ -7,7 +7,6 @@ const About = () => {
       <PageHeader
         title="About Us"
         subtitle="A private limited liability company incorporated in November 2009, delivering essential services across Nigeria."
-        align="center"
       />
 
       <section className="bg-white">
@@ -60,22 +59,35 @@ const About = () => {
                 market. Experience our exceptional services and become part of
                 our valued customer community.
               </p>
-              <a
-                href="/contact"
-                className="mt-6 inline-flex w-fit items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white transition hover:bg-primary/90"
-              >
-                Talk to us
-              </a>
             </div>
-            <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
-              <h3 className="text-lg font-semibold text-slate-900">
-                Why organizations choose us
-              </h3>
-              <ul className="mt-4 space-y-3 text-sm text-slate-600">
-                <li>Consistent quality standards across every business arm.</li>
-                <li>Strategic outlets and logistics built close to markets.</li>
-                <li>People-first partnerships with a focus on reliability.</li>
-              </ul>
+            <div className="space-y-6">
+              <div className="rounded-2xl bg-primary p-6 text-white shadow-sm">
+                <h3 className="text-lg font-semibold text-white">
+                  Building prosperity & self-sufficiency
+                </h3>
+                <p className="mt-3 text-sm text-white/90">
+                  At Newage Group, our approach to sustainability goes beyond
+                  compliance with regulatory expectations. We are driven by a
+                  desire to contribute to, and positively impact the development
+                  of our host communities and society at large.
+                </p>
+              </div>
+              <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+                <h3 className="text-lg font-semibold text-slate-900">
+                  Chairman's welcome video
+                </h3>
+                <p className="mt-3 text-sm text-slate-600">
+                  Watch a short message from the Group Chairman about our
+                  journey, values, and commitment to service excellence.
+                </p>
+                <div className="mt-4 overflow-hidden rounded-xl border border-slate-200 bg-white">
+                  <div className="flex h-52 items-center justify-center bg-slate-100">
+                    <span className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
+                      <Play size={20} />
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

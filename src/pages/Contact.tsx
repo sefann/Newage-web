@@ -196,10 +196,6 @@ const Contact = () => {
                   <Mail size={16} className="text-primary" />
                   info@newagegroupng.com
                 </p>
-                <p className="text-sm text-slate-600">
-                  Instagram: @Newagegroup_ng
-                </p>
-                <p className="text-sm text-slate-600">X: @Newagegroup_ng</p>
               </div>
             </div>
             <div className="rounded-2xl border border-slate-200 bg-primary p-6 text-white">

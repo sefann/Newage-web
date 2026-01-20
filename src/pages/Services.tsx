@@ -1,50 +1,37 @@
-import {
-  BarChart3,
-  Briefcase,
-  Building2,
-  Handshake,
-  LineChart,
-  ShieldCheck,
-} from "lucide-react";
+import { Fish, Fuel, Globe2, Leaf, Truck } from "lucide-react";
 import PageHeader from "../components/PageHeader";
 import ServiceCard from "../components/ServiceCard";
 
 const services = [
   {
-    title: "Strategic Advisory",
+    title: "Energy",
     description:
-      "Corporate strategy, portfolio optimization, and growth roadmaps tailored to market dynamics.",
-    icon: <BarChart3 />,
+      "Quality petroleum products and services with strategic station development and a growing focus on cleaner LPG.",
+    icon: <Fuel />,
   },
   {
-    title: "Operational Excellence",
+    title: "Foods",
     description:
-      "Process redesign, performance management, and continuous improvement programs.",
-    icon: <Briefcase />,
+      "Importation and distribution of frozen foods including fish, poultry, and meat with ethical sourcing and cold-chain infrastructure.",
+    icon: <Fish />,
   },
   {
-    title: "Risk & Compliance",
+    title: "Transport",
     description:
-      "Enterprise risk frameworks, regulatory readiness, and governance advisory services.",
-    icon: <ShieldCheck />,
+      "Haulage, logistics, and route management backed by safety training, fleet maintenance, and secure warehousing support.",
+    icon: <Truck />,
   },
   {
-    title: "Corporate Finance",
+    title: "Agriculture",
     description:
-      "Capital structure advisory, financial modeling, and investment analysis support.",
-    icon: <LineChart />,
+      "Commercial farming across fish, poultry, cattle, and cash crops with international production standards and local market reach.",
+    icon: <Leaf />,
   },
   {
-    title: "Infrastructure & Projects",
+    title: "Exports",
     description:
-      "Project management, infrastructure advisory, and multi-stakeholder coordination.",
-    icon: <Building2 />,
-  },
-  {
-    title: "Partnership Enablement",
-    description:
-      "Partner ecosystem design, stakeholder alignment, and strategic alliance support.",
-    icon: <Handshake />,
+      "International trading of agricultural produce and commodities including sesame seed, charcoal, cashew nuts, and dragon fruit.",
+    icon: <Globe2 />,
   },
 ];
 
@@ -53,7 +40,7 @@ const Services = () => {
     <div>
       <PageHeader
         title="Services"
-        subtitle="Our corporate service portfolio is designed to support leadership teams with clarity, control, and confidence."
+        subtitle="A diversified portfolio delivering energy, food supply, agriculture, transport, and export services across Nigeria."
       />
 
       <section className="bg-white">

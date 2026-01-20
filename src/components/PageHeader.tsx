@@ -8,7 +8,7 @@ const PageHeader = ({ title, subtitle }: PageHeaderProps) => {
     <section className="bg-slate-50">
       <div className="mx-auto w-full max-w-6xl px-4 py-16 lg:px-6">
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">
-          Newage Group
+          New Age Group
         </p>
         <h1 className="mt-4 text-3xl font-semibold text-slate-900 md:text-4xl">
           {title}

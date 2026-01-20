@@ -22,7 +22,7 @@ const Hero = () => {
             transition={{ duration: 0.6 }}
             className="text-sm font-semibold uppercase tracking-[0.2em] text-accent"
           >
-            Future-ready corporate partner
+            Empowering progress across sectors
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -30,7 +30,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mt-4 text-4xl font-semibold leading-tight text-white md:text-5xl"
           >
-            Building trusted business outcomes for forward-thinking enterprises.
+            A multi-pronged group delivering basic needs across Nigeria.
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -38,8 +38,9 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-5 text-lg text-white/80"
           >
-            Newage Group delivers strategy, operations, and innovation services
-            that help organizations scale efficiently and sustainably.
+            New Age Group operates across energy, foods, agriculture, transport,
+            and commodity exports, combining local expertise with global
+            standards since 2009.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -69,20 +70,20 @@ const Hero = () => {
           className="rounded-2xl border border-white/20 bg-white/10 p-6 backdrop-blur"
         >
           <h3 className="text-lg font-semibold text-white">
-            Enterprise impact highlights
+            Group highlights
           </h3>
           <ul className="mt-4 space-y-4 text-sm text-white/80">
             <li className="flex items-start gap-3">
               <span className="mt-1 h-2 w-2 rounded-full bg-accent" />
-              120+ corporate engagements across Africa and Europe.
+              Incorporated in 2009 with operations active since 2013.
             </li>
             <li className="flex items-start gap-3">
               <span className="mt-1 h-2 w-2 rounded-full bg-accent" />
-              24/7 strategic advisory and operational oversight.
+              Strategic offices and outlets across major Nigerian cities.
             </li>
             <li className="flex items-start gap-3">
               <span className="mt-1 h-2 w-2 rounded-full bg-accent" />
-              Proven frameworks aligned with global compliance standards.
+              Sustainability-focused growth across energy and agriculture.
             </li>
           </ul>
         </motion.div>

@@ -6,10 +6,10 @@ const Footer = () => {
     <footer className="bg-slate-950 text-white">
       <div className="mx-auto grid w-full max-w-6xl gap-10 px-4 py-12 lg:grid-cols-[2fr_1fr_1fr] lg:px-6">
         <div>
-          <h3 className="text-xl font-semibold text-white">Newage Group</h3>
+          <h3 className="text-xl font-semibold text-white">New Age Group</h3>
           <p className="mt-3 text-sm text-white/70">
-            Trusted partner for corporate solutions, operational excellence, and
-            sustainable growth across industries.
+            A diversified Nigerian group delivering energy, foods, agriculture,
+            transport, and commodity export solutions since 2009.
           </p>
         </div>
         <div>
@@ -38,15 +38,15 @@ const Footer = () => {
           <div className="mt-4 space-y-3 text-sm text-white/70">
             <p className="flex items-center gap-2">
               <MapPin size={16} className="text-accent" />
-              25 Corporate Avenue, Lagos
+              Main Head Office - Magboro, Ogun State
             </p>
             <p className="flex items-center gap-2">
               <Phone size={16} className="text-accent" />
-              +234 800 000 0000
+              +234 90 5013 8556, +234 90 5013 8555
             </p>
             <p className="flex items-center gap-2">
               <Mail size={16} className="text-accent" />
-              hello@newagegroup.com
+              info@newagegroupng.com
             </p>
           </div>
         </div>

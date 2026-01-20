@@ -25,7 +25,7 @@ const Navbar = () => {
           to="/"
           className="text-lg font-semibold uppercase tracking-wider text-white"
         >
-          Newage Group
+          New Age Group
         </NavLink>
         <nav className="hidden items-center gap-8 text-sm font-medium lg:flex">
           {navLinks.map((link) => (

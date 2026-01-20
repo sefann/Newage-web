@@ -54,7 +54,7 @@ const Contact = () => {
     <div>
       <PageHeader
         title="Contact"
-        subtitle="Let us know how we can support your business goals. We respond within one business day."
+        subtitle="Tell us how we can support your energy, food supply, agriculture, transport, or export needs."
       />
 
       <section className="bg-white">
@@ -132,16 +132,23 @@ const Contact = () => {
               <div className="mt-4 space-y-3 text-sm text-slate-600">
                 <p className="flex items-center gap-2">
                   <MapPin size={16} className="text-primary" />
-                  25 Corporate Avenue, Lagos
+                  Main Head Office - Magboro, Ogun State
+                </p>
+                <p className="text-xs text-slate-500">
+                  PC77+F53, 121101, Magboro, Ogun State
                 </p>
                 <p className="flex items-center gap-2">
                   <Phone size={16} className="text-primary" />
-                  +234 800 000 0000
+                  +234 90 5013 8556, +234 90 5013 8555
                 </p>
                 <p className="flex items-center gap-2">
                   <Mail size={16} className="text-primary" />
-                  hello@newagegroup.com
+                  info@newagegroupng.com
                 </p>
+                <p className="text-sm text-slate-600">
+                  Instagram: @Newagegroup_ng
+                </p>
+                <p className="text-sm text-slate-600">X: @Newagegroup_ng</p>
               </div>
             </div>
             <div className="rounded-2xl border border-slate-200 bg-primary p-6 text-white">

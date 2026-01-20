@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { BarChart3, Briefcase, ShieldCheck } from "lucide-react";
+import { Fish, Fuel, Truck } from "lucide-react";
 import Hero from "../components/Hero";
 import ServiceCard from "../components/ServiceCard";
 
@@ -19,38 +19,42 @@ const Home = () => {
                 Who we are
               </p>
               <h2 className="mt-4 text-3xl font-semibold text-slate-900">
-                Corporate clarity, operational confidence, and measurable growth.
+                Empowering progress with essential services across Nigeria.
               </h2>
               <p className="mt-4 text-base text-slate-600">
-                Newage Group partners with ambitious organizations to deliver
-                integrated advisory and execution across strategy, finance,
-                governance, and transformation programs.
+                New Age Group is a private limited liability company established
+                in 2009 with operations commencing in 2013. We specialize in
+                energy, foods, agriculture, transport, and commodity exports,
+                delivering dependable products and services to individuals,
+                corporate partners, and communities.
               </p>
             </div>
             <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
               <div className="grid gap-6 sm:grid-cols-2">
                 <div>
-                  <p className="text-2xl font-semibold text-primary">15+</p>
+                  <p className="text-2xl font-semibold text-primary">2009</p>
                   <p className="mt-2 text-sm text-slate-600">
-                    Years of leadership experience
+                    Incorporated in Lagos, Nigeria
                   </p>
                 </div>
                 <div>
-                  <p className="text-2xl font-semibold text-primary">98%</p>
+                  <p className="text-2xl font-semibold text-primary">2013</p>
                   <p className="mt-2 text-sm text-slate-600">
-                    Client retention across key accounts
+                    Operations officially commenced
                   </p>
                 </div>
                 <div>
-                  <p className="text-2xl font-semibold text-primary">8</p>
+                  <p className="text-2xl font-semibold text-primary">5</p>
                   <p className="mt-2 text-sm text-slate-600">
-                    Industry sectors served
+                    Core business arms
                   </p>
                 </div>
                 <div>
-                  <p className="text-2xl font-semibold text-primary">24/7</p>
+                  <p className="text-2xl font-semibold text-primary">
+                    Nationwide
+                  </p>
                   <p className="mt-2 text-sm text-slate-600">
-                    Enterprise support availability
+                    Strategic outlets and offices
                   </p>
                 </div>
               </div>
@@ -67,7 +71,7 @@ const Home = () => {
                 Services
               </p>
               <h2 className="mt-4 text-3xl font-semibold text-slate-900">
-                Integrated corporate solutions tailored to your enterprise.
+                Diversified services delivering basic needs at scale.
               </h2>
             </div>
             <NavLink
@@ -79,19 +83,19 @@ const Home = () => {
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             <ServiceCard
-              title="Strategic Advisory"
-              description="Board-level strategy, market positioning, and growth frameworks aligned with measurable ROI."
-              icon={<BarChart3 />}
+              title="Energy"
+              description="Quality petroleum products and services with a growing focus on cleaner LPG solutions."
+              icon={<Fuel />}
             />
             <ServiceCard
-              title="Corporate Operations"
-              description="Operational redesign, process optimization, and governance structures for efficiency."
-              icon={<Briefcase />}
+              title="Foods"
+              description="Importation, distribution, and sales of frozen foods with ethical sourcing and cold-chain reliability."
+              icon={<Fish />}
             />
             <ServiceCard
-              title="Risk & Compliance"
-              description="Enterprise risk management, regulatory compliance, and assurance support."
-              icon={<ShieldCheck />}
+              title="Transport"
+              description="Bespoke haulage, logistics, and warehousing support for internal and external clients."
+              icon={<Truck />}
             />
           </div>
         </div>
@@ -105,11 +109,11 @@ const Home = () => {
           <div className="grid gap-8 lg:grid-cols-[1.4fr_0.6fr] lg:items-center">
             <div>
               <h2 className="text-3xl font-semibold text-white">
-                Ready to elevate your corporate performance?
+                Ready to build resilient supply and service partnerships?
               </h2>
               <p className="mt-4 text-base text-white/80">
-                Engage Newage Group for tailored solutions that drive measurable
-                growth, governance excellence, and operational resilience.
+                Engage New Age Group for reliable energy, food supply, logistics,
+                and commodity export services designed for sustainable growth.
               </p>
             </div>
             <NavLink

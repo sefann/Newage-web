@@ -46,9 +46,17 @@ const Home = () => {
     <div>
       <Hero />
 
-      <section className="bg-white">
+      <section className="relative overflow-hidden bg-white">
+        <div className="absolute inset-0">
+          <img
+            src="/temp4.png"
+            alt="New Age Group background"
+            className="h-full w-full object-cover opacity-20"
+            loading="lazy"
+          />
+        </div>
         <div
-          className="mx-auto w-full max-w-6xl px-4 py-16 lg:px-6"
+          className="relative mx-auto w-full max-w-6xl px-4 py-16 lg:px-6"
           data-aos="fade-up"
         >
           <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
@@ -83,20 +91,26 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="bg-slate-50">
-        <div className="mx-auto w-full max-w-6xl px-4 py-16 lg:px-6">
+      <section className="relative overflow-hidden bg-primary text-white">
+        <div className="pointer-events-none absolute inset-0">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(0,47,109,0.55),transparent_60%)]" />
+          <div className="absolute -left-16 top-10 h-56 w-56 rounded-full bg-blue-400/25 blur-3xl animate-pulse" />
+          <div className="absolute -right-10 bottom-10 h-60 w-60 rounded-full bg-blue-500/25 blur-3xl animate-pulse" />
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-transparent to-blue-800/30" />
+        </div>
+        <div className="relative z-10 mx-auto w-full max-w-6xl px-4 py-16 lg:px-6">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div data-aos="fade-up">
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">
                 Services
               </p>
-              <h2 className="mt-4 text-3xl font-semibold text-slate-900">
+              <h2 className="mt-4 text-3xl font-semibold text-white">
                 Diversified services delivering basic needs at scale.
               </h2>
             </div>
             <NavLink
               to="/services"
-              className="text-sm font-semibold text-primary hover:text-primary/80"
+              className="text-sm font-semibold text-white/80 transition hover:text-white"
             >
               View all services
             </NavLink>
@@ -116,9 +130,17 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="bg-white">
+      <section className="relative overflow-hidden bg-white">
+        <div className="absolute inset-0">
+          <img
+            src="/temp4.png"
+            alt="New Age Group background"
+            className="h-full w-full object-cover opacity-20"
+            loading="lazy"
+          />
+        </div>
         <div
-          className="mx-auto w-full max-w-6xl px-4 py-16 lg:px-6"
+          className="relative mx-auto w-full max-w-6xl px-4 py-16 lg:px-6"
           data-aos="fade-up"
         >
           <div className="flex flex-col gap-8 rounded-3xl border border-slate-200 bg-white p-8 shadow-sm lg:flex-row lg:items-center lg:justify-between lg:p-12">
@@ -131,7 +153,7 @@ const Home = () => {
               </h2>
             </div>
             <a
-              href="/company-profile.pdf"
+              href="/NEW%20AGE%20COMPANY%20PROFILE.pdf"
               className="inline-flex items-center justify-center rounded-xl bg-primary px-8 py-4 text-sm font-semibold text-white shadow-lg shadow-primary/20 transition hover:bg-primary/90"
               download
             >

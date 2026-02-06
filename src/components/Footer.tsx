@@ -6,8 +6,13 @@ const Footer = () => {
     <footer className="bg-slate-950 text-white">
       <div className="mx-auto grid w-full max-w-6xl gap-10 px-4 py-12 lg:grid-cols-[2fr_1fr_1fr] lg:px-6">
         <div>
-          <h3 className="text-xl font-semibold text-white">New Age Group</h3>
-          <p className="mt-3 text-sm text-white/70">
+          <img
+            src="/newage-logoblue.svg"
+            alt="New Age Group"
+            className="h-32 w-auto"
+            loading="lazy"
+          />
+          <p className="mt-4 text-sm text-white/70">
             A diversified Nigerian group delivering energy, foods, agriculture,
             transport, and commodity export solutions since 2009.
           </p>
@@ -94,8 +99,18 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="border-t border-white/10 py-4 text-center text-xs text-white/60">
-        © {new Date().getFullYear()} Newage Group. All rights reserved.
+      <div className="border-t border-white/10 py-4">
+        <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-2 px-4 text-xs text-white/60 lg:flex-row lg:justify-between lg:px-6">
+          <span>© {new Date().getFullYear()} Newage Group. All rights reserved.</span>
+          <div className="flex items-center gap-4">
+            <NavLink to="/privacy" className="transition hover:text-white">
+              Privacy Policy
+            </NavLink>
+            <NavLink to="/terms" className="transition hover:text-white">
+              Terms of Service
+            </NavLink>
+          </div>
+        </div>
       </div>
     </footer>
   );

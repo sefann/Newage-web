@@ -22,11 +22,13 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 bg-primary shadow-lg">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-4 lg:px-6">
-        <NavLink
-          to="/"
-          className="text-lg font-semibold uppercase tracking-wider text-white"
-        >
-          New Age Group
+        <NavLink to="/" aria-label="New Age Group" className="block h-8">
+          <img
+            src="/newage-logowhite.svg"
+            alt="New Age Group"
+            className="h-8 w-auto -ml-2 scale-[4] origin-left"
+            loading="lazy"
+          />
         </NavLink>
         <nav className="hidden items-center gap-8 text-sm font-medium lg:flex">
           {navLinks.map((link) => (

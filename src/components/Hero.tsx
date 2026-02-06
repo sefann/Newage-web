@@ -8,7 +8,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(0,47,109,0.95),rgba(0,47,109,0.8))]" />
       <div className="absolute inset-0 opacity-20">
         <img
-          src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1600&q=80"
+          src="/newage-banner.png"
           alt="Corporate team collaboration"
           className="h-full w-full object-cover"
           loading="lazy"

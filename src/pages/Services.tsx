@@ -5,7 +5,7 @@ const services = [
     id: "energy",
     title: "Energy",
     image:
-      "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1200&q=80",
+      "/images/energy.jpeg",
     body: [
       "New Age Company Limited established its energy arm in 2009 to provide top-notch quality petroleum products and services to both individual and corporate clients in Nigeria.",
       "The company invested in constructing, developing, and acquiring niche petroleum products dispensing and service stations at strategic locations across the country.",
@@ -15,9 +15,9 @@ const services = [
   },
   {
     id: "foods",
-    title: "Foods",
+    title: "Frozen Foods",
     image:
-      "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1200&q=80",
+      "/images/seafood.jpeg",
     body: [
       "The foods arm of the company is engaged in the importation, distribution, and sales of frozen foods, majorly consisting of fish and fish products, poultry, and meat.",
       "The company plans to include other sea food products like shellfish, lobster, prawns, king prawns, crabs, and calamari to its product offerings.",
@@ -29,7 +29,7 @@ const services = [
     id: "transport",
     title: "Transport",
     image:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
+      "/images/transport.jpeg",
     body: [
       "The transport arm of the company specializes in the haulage and transportation of various types of commodities. The company has made huge investments in personnel, logistics infrastructure, bespoke haulage fleet, and an efficient route management system.",
       "The transport arm primarily caters to the haulage requirements of the other business arms in the company.",
@@ -45,7 +45,7 @@ const services = [
     id: "agriculture",
     title: "Agriculture",
     image:
-      "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1200&q=80",
+      "/images/agric.jpeg",
     body: [
       "Agriculture plays a significant role in the Nigerian economy, contributing around 21% to GDP and maintaining positive growth even during economic downturns.",
       "The sector has excellent potential for export revenue earning, with cocoa, groundnuts, sorghum, and millet historically contributing to Nigeria’s foreign exchange earnings.",
@@ -60,7 +60,7 @@ const services = [
     id: "exports",
     title: "Exports",
     image:
-      "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1200&q=80",
+      "/images/export.jpeg",
     body: [
       "The Nigerian economy heavily relies on commodity exports, which consist of raw materials such as agricultural products, minerals, ores, and metals.",
       "Unfortunately, Nigeria’s economy is dominated by crude oil, which accounts for 96% of the country’s export revenue. As a result, the Nigerian government is encouraging private companies to participate in the commodities export business in order to diversify the economy.",
@@ -78,6 +78,7 @@ const Services = () => {
       <PageHeader
         title="Services"
         subtitle="A diversified portfolio delivering energy, food supply, agriculture, transport, and export services across Nigeria."
+        imageSrc="/service-banner.png"
       />
 
       <section className="bg-slate-50">
@@ -86,32 +87,64 @@ const Services = () => {
           data-aos="fade-up"
         >
           <div className="space-y-12">
-            {services.map((service, index) => (
-              <div
-                key={service.id}
-                id={service.id}
-                className="scroll-mt-28 rounded-3xl border border-slate-200 bg-white p-6 lg:p-10"
-                data-aos="fade-up"
-              >
+            {services.map((service, index) => {
+              const hasBlueBackdrop =
+                service.id === "foods" || service.id === "agriculture";
+
+              return (
                 <div
-                  className={`grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center ${
+                  key={service.id}
+                  id={service.id}
+                  className={`scroll-mt-28 rounded-3xl border border-slate-200 p-6 lg:p-10 ${
+                    hasBlueBackdrop
+                      ? "relative overflow-hidden bg-primary text-white"
+                      : "bg-white"
+                  }`}
+                  data-aos="fade-up"
+                >
+                  {hasBlueBackdrop && (
+                    <div className="pointer-events-none absolute inset-0">
+                      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(0,47,109,0.55),transparent_60%)]" />
+                      <div className="absolute -left-16 top-10 h-56 w-56 rounded-full bg-blue-400/25 blur-3xl animate-pulse" />
+                      <div className="absolute -right-10 bottom-10 h-60 w-60 rounded-full bg-blue-500/25 blur-3xl animate-pulse" />
+                      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-transparent to-blue-800/30" />
+                    </div>
+                  )}
+                <div
+                  className={`relative grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center ${
                     index % 2 === 1 ? "lg:[&>div:first-child]:order-2" : ""
                   }`}
                 >
                   <div>
-                    <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">
+                    <p
+                      className={`text-sm font-semibold uppercase tracking-[0.2em] ${
+                        hasBlueBackdrop ? "text-accent" : "text-accent"
+                      }`}
+                    >
                       {service.title}
                     </p>
-                    <h2 className="mt-4 text-2xl font-semibold text-slate-900">
+                    <h2
+                      className={`mt-4 text-2xl font-semibold ${
+                        hasBlueBackdrop ? "text-white" : "text-slate-900"
+                      }`}
+                    >
                       {service.title} Services
                     </h2>
-                    <div className="mt-4 space-y-4 text-sm text-slate-600">
+                    <div
+                      className={`mt-4 space-y-4 text-sm ${
+                        hasBlueBackdrop ? "text-white/80" : "text-slate-600"
+                      }`}
+                    >
                       {service.body.map((paragraph) => (
                         <p key={paragraph}>{paragraph}</p>
                       ))}
                     </div>
                   </div>
-                  <div className="overflow-hidden rounded-2xl border border-slate-200">
+                  <div
+                    className={`overflow-hidden rounded-2xl border ${
+                      hasBlueBackdrop ? "border-white/20" : "border-slate-200"
+                    }`}
+                  >
                     <img
                       src={service.image}
                       alt={`${service.title} operations`}
@@ -120,8 +153,9 @@ const Services = () => {
                     />
                   </div>
                 </div>
-              </div>
-            ))}
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

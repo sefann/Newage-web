@@ -1,5 +1,56 @@
+import type { ReactNode } from "react";
 import { Mail, Play } from "lucide-react";
 import PageHeader from "../components/PageHeader";
+
+const femalePlaceholderSvg = `
+  <svg width="600" height="720" viewBox="0 0 600 720" xmlns="http://www.w3.org/2000/svg">
+    <rect width="600" height="720" rx="48" fill="#f1f5f9" />
+    <circle cx="300" cy="260" r="120" fill="#cbd5e1" />
+    <path d="M120 640c0-120 80-200 180-200s180 80 180 200v40H120v-40z" fill="#cbd5e1" />
+  </svg>
+`;
+const femalePlaceholder = `data:image/svg+xml;utf8,${encodeURIComponent(
+  femalePlaceholderSvg
+)}`;
+
+type SectionProps = {
+  children: ReactNode;
+  className?: string;
+  backgroundImage?: string;
+  backgroundImageClassName?: string;
+};
+
+const Section = ({
+  children,
+  className = "",
+  backgroundImage,
+  backgroundImageClassName = "opacity-25",
+}: SectionProps) => {
+  return (
+    <section className={`relative overflow-hidden ${className}`}>
+      {backgroundImage && (
+        <div className="absolute inset-0" aria-hidden="true">
+          <img
+            src={backgroundImage}
+            alt=""
+            className={`h-full w-full object-cover ${backgroundImageClassName}`}
+            loading="lazy"
+          />
+        </div>
+      )}
+      <div className="relative">{children}</div>
+    </section>
+  );
+};
+
+const BlueBackdrop = () => (
+  <div className="pointer-events-none absolute inset-0" aria-hidden="true">
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(0,47,109,0.55),transparent_60%)]" />
+    <div className="absolute -left-16 top-10 h-56 w-56 rounded-full bg-blue-400/25 blur-3xl animate-pulse" />
+    <div className="absolute -right-10 bottom-10 h-60 w-60 rounded-full bg-blue-500/25 blur-3xl animate-pulse" />
+    <div className="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-transparent to-blue-800/30" />
+  </div>
+);
 
 const About = () => {
   return (
@@ -7,9 +58,10 @@ const About = () => {
       <PageHeader
         title="About Us"
         subtitle="A private limited liability company incorporated in November 2009, delivering essential services across Nigeria."
+        imageSrc="/aboutone.png"
       />
 
-      <section className="bg-white">
+      <Section className="bg-white" backgroundImage="/temp4.png">
         <div
           className="mx-auto w-full max-w-6xl px-4 py-16 lg:px-6"
           data-aos="fade-up"
@@ -91,9 +143,9 @@ const About = () => {
             </div>
           </div>
         </div>
-      </section>
+      </Section>
 
-      <section className="bg-slate-50">
+      <Section className="bg-slate-50">
         <div
           className="mx-auto w-full max-w-6xl px-4 py-16 lg:px-6"
           data-aos="fade-up"
@@ -166,11 +218,12 @@ const About = () => {
             </div>
           </div>
         </div>
-      </section>
+      </Section>
 
-      <section className="bg-white">
+      <Section className="bg-primary text-white">
+        <BlueBackdrop />
         <div
-          className="mx-auto w-full max-w-6xl px-4 py-16 lg:px-6"
+          className="relative z-10 mx-auto w-full max-w-6xl px-4 py-16 lg:px-6"
           data-aos="fade-up"
         >
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
@@ -178,10 +231,10 @@ const About = () => {
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">
                 Core Values
               </p>
-              <h2 className="mt-4 text-3xl font-semibold text-slate-900">
+              <h2 className="mt-4 text-3xl font-semibold text-white">
                 Guiding our success.
               </h2>
-              <p className="mt-4 max-w-3xl text-base text-slate-600">
+              <p className="mt-4 max-w-3xl text-base text-white/80">
                 Our values serve as a moral compass, guiding our actions and
                 defining our behavior in the world.
               </p>
@@ -221,19 +274,19 @@ const About = () => {
               },
             ].map((value) => (
               <div key={value.title}>
-                <h3 className="text-xl font-semibold text-slate-900">
+                <h3 className="text-xl font-semibold text-white">
                   {value.title}
                 </h3>
-                <p className="mt-3 text-sm text-slate-600">
+                <p className="mt-3 text-sm text-white/80">
                   {value.description}
                 </p>
               </div>
             ))}
           </div>
         </div>
-      </section>
+      </Section>
 
-      <section className="bg-white">
+      <Section className="bg-white" backgroundImage="/temp4.png">
         <div
           className="mx-auto w-full max-w-6xl px-4 py-16 lg:px-6"
           data-aos="fade-up"
@@ -253,50 +306,45 @@ const About = () => {
               {
                 name: "Mr. Sulaimon A. Ajishafe",
                 role: "Group Chairman",
-                bio: "Founder and CEO of New Age Energy Ltd, he has transformed the company into a diversified conglomerate spanning oil and gas, seafood trading, farming, and processing industries.",
-                image:
-                  "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80",
-                email: "sulaimon.ajishafe@newagegroupng.com",
+                bio: "Introducing Mr. Sulaimon A. Ajishafe, a visionary entrepreneur and the Founder and current CEO of NEW AGE ENERGY LTD. With his unwavering dedication, infectious energy, and strategic acumen, Mr. Ajishafe has transformed the company into a diversified conglomerate spanning the Oil and Gas, Seafood Trading and poultry, farming, chicken and meat processing industries.",
+                image: "/images/ajishafe.png",
+                email: "s.ajishafe@newagegroupng.com",
               },
               {
                 name: "Alhaja Simiat Jimoh",
                 role: "Director",
-                bio: "With over 40 years in frozen seafood, she is CEO of Progress Seafood Nigeria Ltd and brings deep industry leadership to the board.",
-                image:
-                  "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=800&q=80",
+                bio: "Alhaja Simiat Jimoh has over forty (40) years’ experience in the frozen seafood business and was elected to the Board of NEW AGE in September 2015. She is the Chief Executive Officer of M/S. Progress Seafood Nigeria Ltd, a household name and one of the biggest distributors of frozen fish in Nigeria.",
+                image: femalePlaceholder,
                 email: "simiat.jimoh@newagegroupng.com",
               },
               {
                 name: "Aisha Yasmin Abdullahi Adamu",
                 role: "Executive Director",
-                bio: "Oversees multi-sector operations with expertise in business development, strategy, and stakeholder engagement. Formerly with Microsoft and holds an Executive MBA from the London School of Business and Finance with Harvard executive training.",
-                image:
-                  "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=800&q=80",
-                email: "aisha.adamu@newagegroupng.com",
+                bio: "Aisha Yasmin Abdullahi Adamu serves as Executive Director of New Age Group, where she oversees the Group’s multi-sector operations in agriculture, oil & gas, and trade. With a background in business development and experience at Microsoft, she brings deep expertise in strategy, branding, and stakeholder engagement. Aisha holds a BSc in Microbiology, an Executive MBA from the London School of Business and Finance, and executive training in Global Business from Harvard University. She is known for driving innovation, fostering impactful partnerships, and leading with a vision rooted in growth and sustainability.",
+                image: "/images/aisha.jpg",
+                email: "aisha@newagegroupng.com",
               },
               {
                 name: "Mr. Tammesh Singh",
                 role: "Head, Sales & Marketing",
-                bio: "Brings 17+ years of experience in business development, exports, and international marketing to expand the group's reach and partnerships.",
-                image:
-                  "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80",
-                email: "tammesh.singh@newagegroupng.com",
+                bio: "Tammesh has over 17 years’ experience and expertise in Business Development (Exports), International Marketing, Merchant Export and Domestic Marketing (Retail and Channel Sales). His responsibilities in NEW AGE include the following among others......",
+                image: "/images/tammish.jpeg",
+                email: "Tammesh@newagegroupng.com",
               },
               {
-                name: "Leadership Appointment",
-                role: "Management Team",
-                bio: "Additional profile coming soon as the group continues to expand leadership capacity across its business arms.",
-                image:
-                  "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80",
-                email: "leadership@newagegroupng.com",
+                name: "Mr. Ashmit",
+                role: "Sales and Marketing",
+                bio: "Ashmit is a sales and marketing professional with experience in local market engagement and customer acquisition. With a strong understanding of regional market dynamics, Ashmit supports brand visibility and revenue growth through effective sales strategies and on-ground marketing efforts.",
+                image: "/images/ashmit.png",
+                email: "ashmit@newagegroupng.com",
               },
             ].map((leader) => (
               <article
                 key={leader.name}
                 className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm"
               >
-                <div className="grid gap-6 p-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-                  <div className="overflow-hidden rounded-2xl bg-slate-100">
+                <div className="grid gap-6 p-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-stretch">
+                  <div className="h-64 overflow-hidden rounded-2xl bg-slate-100 lg:h-full lg:min-h-[260px]">
                     <img
                       src={leader.image}
                       alt={leader.name}
@@ -325,30 +373,36 @@ const About = () => {
             ))}
           </div>
         </div>
-      </section>
+      </Section>
 
-      <section className="bg-slate-50">
+      <Section className="bg-primary text-white">
+        <div className="pointer-events-none absolute inset-0">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(0,47,109,0.55),transparent_60%)]" />
+          <div className="absolute -left-16 top-10 h-56 w-56 rounded-full bg-blue-400/25 blur-3xl animate-pulse" />
+          <div className="absolute -right-10 bottom-10 h-60 w-60 rounded-full bg-blue-500/25 blur-3xl animate-pulse" />
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-transparent to-blue-800/30" />
+        </div>
         <div
           className="mx-auto w-full max-w-6xl px-4 py-16 lg:px-6"
           data-aos="fade-up"
         >
           <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
             <div>
-              <h2 className="text-2xl font-semibold text-slate-900">
+              <h2 className="text-2xl font-semibold text-white">
                 Sustainability and community impact.
               </h2>
-              <p className="mt-4 text-base text-slate-600">
+              <p className="mt-4 text-base text-white/80">
                 Our approach to sustainability goes beyond compliance. We are
                 committed to empowering local economies, fostering inclusive
                 partnerships, and driving transformative impact across the
                 communities we serve.
               </p>
             </div>
-            <div className="rounded-2xl border border-slate-200 bg-white p-6">
-              <h3 className="text-lg font-semibold text-slate-900">
+            <div className="rounded-2xl border border-white/20 bg-white/10 p-6">
+              <h3 className="text-lg font-semibold text-white">
                 Building prosperity and self-sufficiency
               </h3>
-              <p className="mt-3 text-sm text-slate-600">
+              <p className="mt-3 text-sm text-white/80">
                 Through responsible business practices and innovation, we aim
                 to create resilient, future-ready industries that strengthen
                 Nigeria's growth.
@@ -356,7 +410,7 @@ const About = () => {
             </div>
           </div>
         </div>
-      </section>
+      </Section>
     </div>
   );
 };

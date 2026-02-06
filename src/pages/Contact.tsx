@@ -106,6 +106,7 @@ const Contact = () => {
       <PageHeader
         title="Contact"
         subtitle="Tell us how we can support your energy, food supply, agriculture, transport, or export needs."
+        imageSrc="/contact-banner.png"
       />
 
       <section className="bg-white">

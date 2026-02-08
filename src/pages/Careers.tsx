@@ -33,6 +33,7 @@ const Careers = () => {
       <PageHeader
         title="Careers"
         subtitle="Build the future with New Age Group. We are committed to developing people, building local capacity, and creating lasting impact."
+        imageSrc="/career-banner.png"
       />
 
       <section className="bg-white">

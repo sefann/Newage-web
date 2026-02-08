@@ -154,7 +154,7 @@ const About = () => {
             <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white">
               <div className="h-40 w-full">
                 <img
-                  src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=80"
+                  src="/vision.png"
                   alt="New Age Group vision"
                   className="h-full w-full object-cover"
                   loading="lazy"
@@ -188,7 +188,7 @@ const About = () => {
             <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white">
               <div className="h-40 w-full">
                 <img
-                  src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80"
+                  src="/mission.png"
                   alt="New Age Group mission"
                   className="h-full w-full object-cover"
                   loading="lazy"
@@ -318,7 +318,7 @@ const About = () => {
                 email: "simiat.jimoh@newagegroupng.com",
               },
               {
-                name: "Aisha Yasmin Abdullahi Adamu",
+                name: "Aisha Abdullahi Adamu",
                 role: "Executive Director",
                 bio: "Aisha Yasmin Abdullahi Adamu serves as Executive Director of New Age Group, where she oversees the Group’s multi-sector operations in agriculture, oil & gas, and trade. With a background in business development and experience at Microsoft, she brings deep expertise in strategy, branding, and stakeholder engagement. Aisha holds a BSc in Microbiology, an Executive MBA from the London School of Business and Finance, and executive training in Global Business from Harvard University. She is known for driving innovation, fostering impactful partnerships, and leading with a vision rooted in growth and sustainability.",
                 image: "/images/aisha.jpg",

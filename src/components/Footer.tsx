@@ -81,7 +81,7 @@ const Footer = () => {
                 <Twitter size={18} />
               </a>
               <a
-                href="https://instagram.com/Newagegroup_ng"
+                href="https://www.instagram.com/newagefoods?igsh=bHMyYTdqZmlvaG1v"
                 className="transition hover:text-white"
                 aria-label="Instagram"
                 target="_blank"

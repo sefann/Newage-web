@@ -6,52 +6,71 @@ const FORM_ENDPOINT = "https://formspree.io/f/yourFormId";
 
 const branches = [
   {
-    name: "Magboro Head Office",
-    location: "Magboro, Ogun State",
-    image:
-      "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=800&q=80",
+    name: "NEW AGE FARM",
+    location: "New Age Farm",
+    image: "/locations/fnew age farm.jpg",
   },
   {
-    name: "Ikeja Service Point",
-    location: "Ikeja, Lagos State",
-    image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
+    name: "MAGBORO BRANCH",
+    location: "Magboro",
+    image: "/locations/magboro.jpg",
   },
   {
-    name: "Lekki Service Point",
-    location: "Lekki, Lagos State",
-    image:
-      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=80",
+    name: "AYOBO BRANCH",
+    location: "Ayobo",
+    address: "No 6-8, Ashipa Road, Amule Bus-Stop, Ayobo, Lagos.",
+    phone: "+234 80 8810 6966",
+    email: "info@newagegroupng.com",
+    image: "/locations/ayobo.JPG",
   },
   {
-    name: "Ajah Service Point",
-    location: "Ajah, Lagos State",
-    image:
-      "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80",
+    name: "AKANRAN BRANCH",
+    location: "Akanran",
+    address: "No 101, Akaran Road, Ido-Iroko, Ibadan, Oyo",
+    phone: "+234 90 5013 8557",
+    email: "info@newagegroupng.com",
+    image: "/locations/akanran.jpg",
   },
   {
-    name: "Victoria Island Outlet",
-    location: "Victoria Island, Lagos State",
-    image:
-      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?auto=format&fit=crop&w=800&q=80",
+    name: "ILESHA BRANCH",
+    location: "Ilesha",
+    address: "No 7, Odo Oro Street, opposite Access Bank, Ilesha, Osun",
+    phone: "+234 80 8952 2822",
+    email: "info@newagegroupng.com",
+    image: "/locations/illesha.JPG",
   },
   {
-    name: "Abeokuta Branch",
-    location: "Abeokuta, Ogun State",
-    image:
-      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80",
+    name: "JERICHO BRANCH",
+    location: "Jericho",
+    address: "No 8a, Eleyele road, polo junction, Jericho, Ibadan",
+    phone: "+234 90 5013 8542",
+    email: "info@newagegroupng.com",
+    image: "/locations/jericho.JPG",
   },
   {
-    name: "Sagamu Branch",
-    location: "Sagamu, Ogun State",
-    image:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80",
+    name: "SHAGAMU BRANCH",
+    location: "Shagamu",
+    address: "168 Akarigbo Road, Sagamu",
+    phone: "+234 91 1518 5176",
+    email: "info@newagegroupng.com",
+    image: "/locations/shagamu.JPG",
   },
   {
-    name: "Ijebu Ode Branch",
-    location: "Ijebu Ode, Ogun State",
-    image:
-      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=800&q=80",
+    name: "SANGOTEDO BRANCH",
+    location: "Sangotedo",
+    address:
+      "Thesaurus Garden drive, off Lekki-Epe Expressway, opposite Sunview Estate, Sangotedo, Lekki, Lagos.",
+    phone: "+234 90 5013 8546",
+    email: "info@newagegroupng.com",
+    image: "/locations/sangotedo.jpg",
+  },
+  {
+    name: "IWO BRANCH",
+    location: "Iwo",
+    address: "No 18 Segelu Bus Stop, New Ife Road, Iwo Road, Ibadan, Oyo",
+    phone: "+234 80 8952 2822",
+    email: "info@newagegroupng.com",
+    image: "/locations/IWO BRANCH.jpg",
   },
 ];
 
@@ -191,7 +210,7 @@ const Contact = () => {
                 </p>
                 <p className="flex items-center gap-2">
                   <Phone size={16} className="text-primary" />
-                  +234 90 5013 8556, +234 90 5013 8555
+                  Phone / WhatsApp: +234 905 013 8569
                 </p>
                 <p className="flex items-center gap-2">
                   <Mail size={16} className="text-primary" />
@@ -200,7 +219,7 @@ const Contact = () => {
               </div>
             </div>
             <div className="rounded-2xl border border-slate-200 bg-primary p-6 text-white">
-              <h3 className="text-lg font-semibold">Working Hours</h3>
+              <h3 className="text-lg font-semibold text-white">Working Hours</h3>
               <p className="mt-3 text-sm text-white/80">
                 Monday - Friday: 9:00 AM - 6:00 PM
               </p>
@@ -232,30 +251,53 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {branches.map((branch) => (
-              <div
-                key={branch.name}
-                className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
-              >
-                <div className="h-24 w-full overflow-hidden">
-                  <img
-                    src={branch.image}
-                    alt={branch.name}
-                    className="h-full w-full object-cover"
-                    loading="lazy"
-                  />
+          <div className="group mt-10 overflow-hidden">
+            <div
+              className="flex gap-5 group-hover:[animation-play-state:paused]"
+              style={{
+                width: "max-content",
+                animation: "branch-slide 60s linear infinite",
+              }}
+            >
+              {[...branches, ...branches].map((branch, i) => (
+                <div
+                  key={`${branch.name}-${i}`}
+                  className="w-[280px] shrink-0 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
+                >
+                  <div className="h-28 w-full overflow-hidden">
+                    <img
+                      src={branch.image}
+                      alt={branch.name}
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <h3 className="text-sm font-semibold text-slate-900">
+                      {branch.name}
+                    </h3>
+                    <p className="mt-1 text-xs text-slate-500">
+                      {branch.location}
+                    </p>
+                    {"address" in branch && (
+                      <p className="mt-2 text-xs text-slate-600">
+                        {branch.address}
+                      </p>
+                    )}
+                    {"phone" in branch && (
+                      <p className="mt-1 text-xs text-slate-600">
+                        Phone: {branch.phone}
+                      </p>
+                    )}
+                    {"email" in branch && (
+                      <p className="mt-1 text-xs text-slate-600">
+                        Email: {branch.email}
+                      </p>
+                    )}
+                  </div>
                 </div>
-                <div className="p-4">
-                  <h3 className="text-sm font-semibold text-slate-900">
-                    {branch.name}
-                  </h3>
-                  <p className="mt-1 text-xs text-slate-500">
-                    {branch.location}
-                  </p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>

@@ -81,23 +81,23 @@ const Careers = () => {
         </div>
       </section>
 
-      <section className="bg-slate-50">
+      <section className="bg-primary">
         <div
           className="mx-auto w-full max-w-6xl px-4 py-16 lg:px-6"
           data-aos="fade-up"
         >
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-white/80">
                 Open roles
               </p>
-              <h2 className="mt-4 text-3xl font-semibold text-slate-900">
+              <h2 className="mt-4 text-3xl font-semibold text-white">
                 Current career opportunities
               </h2>
             </div>
             <a
               href="/contact"
-              className="text-sm font-semibold text-primary hover:text-primary/80"
+              className="text-sm font-semibold text-white/80 hover:text-white"
             >
               Contact recruitment team
             </a>

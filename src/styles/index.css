@@ -18,3 +18,12 @@
     @apply text-slate-900;
   }
 }
+
+@keyframes branch-slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

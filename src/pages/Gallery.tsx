@@ -69,7 +69,7 @@ const Gallery = () => {
       <PageHeader
         title="Gallery"
         subtitle="A snapshot of the teams, environments, and partnerships we cultivate with our clients."
-        imageSrc="/gallery/AERIAL VIEW.jpg"
+        imageSrc="/gallery-new.png"
       />
 
       <section className="bg-white">

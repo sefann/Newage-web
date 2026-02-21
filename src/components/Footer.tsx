@@ -14,7 +14,7 @@ const Footer = () => {
           />
           <p className="mt-4 text-sm text-white/70">
             A diversified Nigerian group delivering energy, foods, agriculture,
-            transport, and commodity export solutions since 2009.
+            transport, and commodity export solutions for well over a decade.
           </p>
         </div>
         <div>

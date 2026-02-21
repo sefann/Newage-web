@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Mail, MapPin, Phone } from "lucide-react";
 import PageHeader from "../components/PageHeader";
 
-const FORM_ENDPOINT = "https://formspree.io/f/yourFormId";
+const FORM_ENDPOINT = "https://formspree.io/f/mwvnrvwn";
 
 const branches = [
   {
@@ -13,6 +13,7 @@ const branches = [
   {
     name: "MAGBORO BRANCH",
     location: "Magboro",
+    address: "PC77+F53, 121101, Magboro, Ogun State",
     image: "/locations/magboro.jpg",
   },
   {
@@ -78,46 +79,27 @@ const Contact = () => {
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    setStatus("idle");
-    setErrorMessage("");
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("submitted") === "1") {
+      setStatus("success");
+    }
+  }, []);
 
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     const formData = new FormData(event.currentTarget);
     const name = String(formData.get("name") || "").trim();
     const email = String(formData.get("email") || "").trim();
     const message = String(formData.get("message") || "").trim();
 
     if (!name || !email || !message || !email.includes("@")) {
+      event.preventDefault();
       setStatus("error");
       setErrorMessage("Please provide a valid name, email, and message.");
       return;
     }
-
-    try {
-      const response = await fetch(FORM_ENDPOINT, {
-        method: "POST",
-        body: formData,
-        headers: {
-          Accept: "application/json",
-        },
-      });
-
-      if (response.ok) {
-        setStatus("success");
-        event.currentTarget.reset();
-      } else {
-        setStatus("error");
-        setErrorMessage(
-          "Something went wrong. Please try again or email us directly."
-        );
-      }
-    } catch {
-      setStatus("error");
-      setErrorMessage(
-        "Network error detected. Please check your connection and retry."
-      );
-    }
+    setStatus("idle");
+    setErrorMessage("");
   };
 
   return (
@@ -135,8 +117,15 @@ const Contact = () => {
         >
           <form
             className="rounded-2xl border border-slate-200 bg-slate-50 p-6"
+            action={FORM_ENDPOINT}
+            method="POST"
             onSubmit={handleSubmit}
           >
+            <input
+              type="hidden"
+              name="_next"
+              value={`${typeof window !== "undefined" ? window.location.origin : ""}/contact?submitted=1`}
+            />
             <div className="grid gap-4">
               <div>
                 <label className="text-sm font-medium text-slate-700">
@@ -189,10 +178,6 @@ const Contact = () => {
             {status === "error" && (
               <p className="mt-4 text-sm text-red-600">{errorMessage}</p>
             )}
-            <p className="mt-4 text-xs text-slate-500">
-              Replace the Formspree endpoint in `Contact.tsx` with your project
-              ID before deployment.
-            </p>
           </form>
 
           <div className="space-y-6">
@@ -221,7 +206,7 @@ const Contact = () => {
             <div className="rounded-2xl border border-slate-200 bg-primary p-6 text-white">
               <h3 className="text-lg font-semibold text-white">Working Hours</h3>
               <p className="mt-3 text-sm text-white/80">
-                Monday - Friday: 9:00 AM - 6:00 PM
+                Monday - Friday: 8:00 AM - 6:00 PM
               </p>
               <p className="mt-2 text-sm text-white/80">
                 Saturday: 10:00 AM - 2:00 PM

@@ -109,9 +109,14 @@ const Careers = () => {
                 key={role.title}
                 className="rounded-2xl border border-slate-200 bg-white p-6"
               >
-                <h3 className="text-lg font-semibold text-slate-900">
-                  {role.title}
-                </h3>
+                <div className="flex items-start justify-between gap-4">
+                  <h3 className="text-lg font-semibold text-slate-900">
+                    {role.title}
+                  </h3>
+                  <span className="shrink-0 rounded-full border border-slate-300 bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600">
+                    Closed
+                  </span>
+                </div>
                 <p className="mt-2 text-sm text-slate-600">{role.description}</p>
                 <p className="mt-4 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
                   {role.location}
